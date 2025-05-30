@@ -5,11 +5,11 @@ metadata:
   namespace: terria
   annotations:
     cert-manager.io/cluster-issuer: letsencrypt-production
-    external-dns.alpha.kubernetes.io/hostname: maps.staging.example.com
+    external-dns.alpha.kubernetes.io/hostname: maps.staging.spatialinsite.com.au
 spec:
   ingressClassName: nginx
   rules:
-    - host: maps.staging.example.com
+    - host: maps.staging.spatialinsite.com.au
       http:
         paths:
           - path: /
@@ -21,5 +21,5 @@ spec:
                   number: 3001
   tls:
     - hosts:
-        - maps.staging.example.com
+        - maps.staging.spatialinsite.com.au
       secretName: terria-ingress
