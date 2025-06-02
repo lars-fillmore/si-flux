@@ -12,12 +12,12 @@ spec:
         ingressClassName: nginx
         annotations:
           cert-manager.io/cluster-issuer: letsencrypt-production
-          external-dns.alpha.kubernetes.io/hostname: argo.staging.example.com
+          external-dns.alpha.kubernetes.io/hostname: argo.staging.spatialinsite.com.au
         hosts:
-        - argo.staging.example.com
+        - argo.staging.spatialinsite.com.au
         tls:
         - hosts:
-          - argo.staging.example.com
+          - argo.staging.spatialinsite.com.au
           secretName: argo-ingress
       extraArgs:
       - "--auth-mode=sso"
@@ -28,7 +28,7 @@ spec:
         globallevel: "9"
       sso:
         enabled: true
-        issuer: "https://exampleorg-staging.eu.auth0.com/"
+        issuer: "https://cognito-idp.us-east-1.amazonaws.com/us-west-2_tNZbQ3QA6"
         # Name of a secret and a key in it to retrieve the app OIDC client ID from.
         clientId:
           name: argo-client-secret
@@ -38,7 +38,7 @@ spec:
           name: argo-client-secret
           key: client-secret
         # The OIDC redirect URL. Should be in the form <argo-root-url>/oauth2/callback.
-        redirectUrl: https://argo.staging.example.com/oauth2/callback
+        redirectUrl: https://argo.staging.spatialinsite.com.au/oauth2/callback
         scopes:
         - email
         - groups
