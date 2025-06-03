@@ -12,12 +12,12 @@ spec:
         ingressClassName: nginx
         annotations:
           cert-manager.io/cluster-issuer: letsencrypt-production
-          external-dns.alpha.kubernetes.io/hostname: argo.staging.spatialinsite.com.au
+          external-dns.alpha.kubernetes.io/hostname: argo.de-staging.spatialinsite.com.au
         hosts:
-        - argo.staging.spatialinsite.com.au
+        - argo.de-staging.spatialinsite.com.au
         tls:
         - hosts:
-          - argo.staging.spatialinsite.com.au
+          - argo.de-staging.spatialinsite.com.au
           secretName: argo-ingress
       extraArgs:
       - "--auth-mode=sso"
@@ -48,7 +48,7 @@ spec:
           enabled: true
       serviceAccount:
         create: false
-        name: argo-artifact-read-write-sa  
+        name: argo-artifact-read-write-sa 
     artifactRepository:
       archiveLogs: true
       s3:
