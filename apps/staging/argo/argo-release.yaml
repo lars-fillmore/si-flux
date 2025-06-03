@@ -28,7 +28,7 @@ spec:
         globallevel: "9"
       sso:
         enabled: true
-        issuer: "https://cognito-idp.us-east-1.amazonaws.com/us-west-2_tNZbQ3QA6"
+        issuer: "https://cognito-idp.us-west-2.amazonaws.com/us-west-2_6dpiit0Tf"
         # Name of a secret and a key in it to retrieve the app OIDC client ID from.
         clientId:
           name: argo-client-secret
@@ -38,22 +38,21 @@ spec:
           name: argo-client-secret
           key: client-secret
         # The OIDC redirect URL. Should be in the form <argo-root-url>/oauth2/callback.
-        redirectUrl: https://argo.staging.spatialinsite.com.au/oauth2/callback
+        redirectUrl: https://argo-wf.staging.spatialinsite.com.au/auth/callback
         scopes:
         - email
         - groups
         - profile
-        - org-groups
-        customGroupClaimName: "org-groups"
+        customGroupClaimName: "si-groups"
         rbac:
           enabled: true
       serviceAccount:
         create: false
-        name: argo-artifact-read-write-sa
+        name: argo-artifact-read-write-sa  
     artifactRepository:
       archiveLogs: true
       s3:
-        bucket: argo-artifacts-org-staging
+        bucket: si-argo-artifacts-dep-staging
         region: us-west-2
         endpoint: s3.us-west-2.amazonaws.com
         accessKeySecret:
