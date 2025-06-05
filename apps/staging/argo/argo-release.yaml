@@ -61,18 +61,18 @@ spec:
         secretKeySecret:
           name: argo-artifact-read-write
           key: secret-key
-    controller:
-      persistence:
-        postgresql:
-          host: db-endpoint.db.svc.cluster.local
-          port: 5432
-          database: argo
-          tableName: workflows
-          userNameSecret:
-            name: argo
-            key: username
-          passwordSecret:
-            name: argo
-            key: password
-          ssl: true
-          sslMode: require
+    # controller:
+    #   persistence:
+    #     postgresql:
+    #       host: db-endpoint.db.svc.cluster.local
+    #       port: 5432
+    #       database: argo
+    #       tableName: workflows
+    #       userNameSecret:
+    #         name: argo
+    #         key: username
+    #       passwordSecret:
+    #         name: argo
+    #         key: password
+    #       ssl: true
+    #       sslMode: require
