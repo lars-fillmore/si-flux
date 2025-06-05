@@ -43,7 +43,7 @@ spec:
         - email
         - groups
         - profile
-        customGroupClaimName: "cognito:groups"
+        # customGroupClaimName: "cognito:groups"
         rbac:
           enabled: true
       serviceAccount:
