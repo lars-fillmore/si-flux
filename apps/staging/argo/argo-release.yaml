@@ -28,7 +28,7 @@ spec:
         globallevel: "9"
       sso:
         enabled: true
-        issuer: "https://cognito-idp.us-west-2.amazonaws.com/us-west-2_oVmnNiEDW" 
+        issuer: "https://cognito-idp.us-west-2.amazonaws.com/us-west-2_Jr9gqmted" 
         # Name of a secret and a key in it to retrieve the app OIDC client ID from.
         clientId:
           name: argo-client-secret
