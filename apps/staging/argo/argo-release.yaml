@@ -41,7 +41,7 @@ spec:
         redirectUrl: "https://argo.de-staging.spatialinsite.com.au/oauth2/callback"
         scopes:
         - email
-        - groups
+        - openid
         - profile
         customGroupClaimName: "cognito:groups"
         rbac:
