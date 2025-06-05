@@ -45,7 +45,7 @@ spec:
         - profile
         customGroupClaimName: "cognito:groups"
         rbac:
-          enabled: true
+          enabled: false
       serviceAccount:
         create: false
         name: argo-artifact-read-write-sa 
