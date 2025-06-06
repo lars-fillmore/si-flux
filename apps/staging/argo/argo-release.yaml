@@ -45,7 +45,7 @@ spec:
         - profile
         customGroupClaimName: "groups"
         rbac:
-          enabled: false
+          enabled: true
       serviceAccount:
         create: false
         name: argo-artifact-read-write-sa 
