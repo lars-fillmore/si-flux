@@ -44,7 +44,7 @@ spec:
         - openid
         - profile
         - groups
-        # customGroupClaimName: "cognito:groups"
+        customGroupClaimName: "groups"
         rbac:
           enabled: true
       serviceAccount:
