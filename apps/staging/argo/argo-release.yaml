@@ -45,7 +45,7 @@ spec:
         - profile
         customGroupClaimName: "https://argo.de-staging.spatialinsite.com.au/groups"  
         rbac:
-          enabled: true
+          enabled: false
       serviceAccount:
         create: false
         name: argo-artifact-read-write-sa 
