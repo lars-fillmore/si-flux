@@ -28,7 +28,7 @@ spec:
         globallevel: "9"
       sso:
         enabled: true
-        issuer: "https://cognito-idp.us-west-2.amazonaws.com/us-west-2_Jr9gqmted" 
+        issuer: "https://dev-2o55e7xkn0n07wi6.us.auth0.com" #"https://cognito-idp.us-west-2.amazonaws.com/us-west-2_Jr9gqmted"  
         # Name of a secret and a key in it to retrieve the app OIDC client ID from.
         clientId:
           name: argo-client-secret
@@ -43,7 +43,8 @@ spec:
         - email
         - openid
         - profile
-        customGroupClaimName: "cognito:groups"
+        - groups
+        # customGroupClaimName: "cognito:groups"
         rbac:
           enabled: true
       serviceAccount:
