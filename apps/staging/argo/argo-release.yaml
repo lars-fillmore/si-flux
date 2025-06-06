@@ -43,7 +43,7 @@ spec:
         - email
         - openid
         - profile
-        customGroupClaimName: "auth0:groups"
+        customGroupClaimName: "https://argo.de-staging.spatialinsite.com.au/groups"  
         rbac:
           enabled: true
       serviceAccount:
