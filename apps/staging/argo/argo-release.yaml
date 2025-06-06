@@ -44,7 +44,6 @@ spec:
         - openid
         - profile
         customGroupClaimName: "auth0:groups"
-        userInfoPath: /oauth2/v1/userinfo
         rbac:
           enabled: true
       serviceAccount:
