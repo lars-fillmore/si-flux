@@ -43,8 +43,7 @@ spec:
         - email
         - openid
         - profile
-        - groups
-        customGroupClaimName: "groups"
+        customGroupClaimName: "auth0:groups"
         rbac:
           enabled: true
       serviceAccount:
